@@ -16,7 +16,7 @@ class WeatherController extends AbstractController
     }
 
     /**
-     * @Route("/weather", name="weather")
+     * @Route("/", name="homepage")
      */
     public function index()
     {

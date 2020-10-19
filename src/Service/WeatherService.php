@@ -18,13 +18,37 @@ class WeatherService
     /**
      * @return array
      */
-    public function getWeather()
+    public function getToulouseWeather()
     {
-        $response = $this->client->request('GET', 'https://api.openweathermap.org/data/2.5/weather?lon=1.44&lat=43.6&appid=' . $this->apiKey);
+        $response = $this->client->request(
+            'GET',
+            'https://api.openweathermap.org/data/2.5/weather?id=2972315&appid='. $this->apiKey . '&lang=fr&units=metric'
+        );
+
+        $dataJson = $response->getContent();
+
+        $dataPhpArray  = json_decode($dataJson, true);
 
         return [
-            'temperature' => '20', // en °C
-            'vent' => '17', // en km/H
+            //Weather
+            'description' => $dataPhpArray['weather'][0]['description'],
+            'icon'        => $dataPhpArray['weather'][0]['icon'],
+            'temp'        => $dataPhpArray['main']['temp'],
+            'feels_like'  => $dataPhpArray['main']['feels_like'],
+            'temp_min'    => $dataPhpArray['main']['temp_min'],
+            'temp_max'    => $dataPhpArray['main']['temp_max'],
+            'humidity'    => $dataPhpArray['main']['humidity'],
+            'speed'       => $this->convertWindSpeed($dataPhpArray['wind']['speed']),
+            // Sun
+            'sunrise'     => $dataPhpArray['sys']['sunrise'],
+            'sunset'      => $dataPhpArray['sys']['sunset'],
+            // Town
+            'name'        => $dataPhpArray['name'],
         ];
+    }
+
+    // Converted to kilometer hour
+    public function convertWindSpeed($speedMeterSecond) {
+        return $speedMeterSecond * 3.6;
     }
 }

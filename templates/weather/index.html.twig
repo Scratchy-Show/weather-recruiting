@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Hello WeatherController!
+    Vérifier votre météo
 {% endblock %}
 
 {% block body %}
 
-    <h1>Bienvenue sur la page Météo</h1>
+    <h1>Bienvenue sur la page Météo de {{ data.name }}</h1>
 
+    <img src="http://openweathermap.org/img/wn/{{ data.icon }}@2x.png" alt="{{ data.description }}"/>
+    <p>Actuellement temps {{ data.description }}</p>
+    <p>Température actuelle {{ data.temp }}°C</p>
+    <p>Température resssentie {{ data.feels_like }}°C</p>
+    <p>Température minimale d'aujourd'hui {{ data.temp_min }}°C</p>
+    <p>Température maximale d'aujourd'hui {{ data.temp_max }}°C</p>
+    <p>Humidité {{ data.humidity}}%</p>
+    <p>Vitesse du vent {{ data.speed }} km/h</p>
+    <p>Lever du soleil à {{ data.sunrise | date('H:s', "Europe/Paris")}}</p>
+    <p>Coucher du soleil à {{ data.sunset | date('H:s', "Europe/Paris")}}</p>
 
 {% endblock %}

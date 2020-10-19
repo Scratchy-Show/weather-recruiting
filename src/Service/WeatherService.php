@@ -33,12 +33,12 @@ class WeatherService
             //Weather
             'description' => $dataPhpArray['weather'][0]['description'],
             'icon'        => $dataPhpArray['weather'][0]['icon'],
-            'temp'        => $dataPhpArray['main']['temp'],
-            'feels_like'  => $dataPhpArray['main']['feels_like'],
-            'temp_min'    => $dataPhpArray['main']['temp_min'],
-            'temp_max'    => $dataPhpArray['main']['temp_max'],
+            'temp'        => $this->roundTemperatureValue($dataPhpArray['main']['temp']),
+            'feels_like'  => $this->roundTemperatureValue($dataPhpArray['main']['feels_like']),
+            'temp_min'    => $this->roundTemperatureValue($dataPhpArray['main']['temp_min']),
+            'temp_max'    => $this->roundTemperatureValue($dataPhpArray['main']['temp_max']),
             'humidity'    => $dataPhpArray['main']['humidity'],
-            'speed'       => $this->convertWindSpeed($dataPhpArray['wind']['speed']),
+            'speed'       => $this->convertWindSpeedAndRoundedValue($dataPhpArray['wind']['speed']),
             // Sun
             'sunrise'     => $dataPhpArray['sys']['sunrise'],
             'sunset'      => $dataPhpArray['sys']['sunset'],
@@ -47,8 +47,14 @@ class WeatherService
         ];
     }
 
-    // Converted to kilometer hour
-    public function convertWindSpeed($speedMeterSecond) {
-        return $speedMeterSecond * 3.6;
+    // Converted to kilometer hour and rounded the value
+    public function convertWindSpeedAndRoundedValue($speedMeterSecond) {
+        $speedKilometerHour =  $speedMeterSecond * 3.6;
+        return $this->roundTemperatureValue($speedKilometerHour);
+    }
+
+    // Round the temperature value
+    public function roundTemperatureValue($preciseTemperature) {
+        return round($preciseTemperature);
     }
 }

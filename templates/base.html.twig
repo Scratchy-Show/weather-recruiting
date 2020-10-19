@@ -2,8 +2,13 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Bienvenue!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="description" content="Consulter la météo de votre ville." />
+        <meta name="author" content="Couret Alexandre">
+        <title>Votre météo pour {% block title %}{% endblock %}</title>
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     </head>
     <body>
         {% block body %}{% endblock %}

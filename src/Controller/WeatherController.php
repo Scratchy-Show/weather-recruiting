@@ -20,8 +20,9 @@ class WeatherController extends AbstractController
      */
     public function index()
     {
+        $data = $this->weatherService->getToulouseWeather();
         return $this->render('weather/index.html.twig', array(
-            // ...
+            'data' => $data
         ));
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use Exception;
 use Symfony\Component\HttpClient\HttpClient;
 
 class WeatherService
@@ -17,17 +18,24 @@ class WeatherService
 
     /**
      * @return array
+     * @throws Exception
      */
     public function getToulouseWeather()
     {
-        $response = $this->client->request(
-            'GET',
-            'https://api.openweathermap.org/data/2.5/weather?id=2972315&appid='. $this->apiKey . '&lang=fr&units=metric'
-        );
+        try {
+            $response = $this->client->request(
+                'GET',
+                'https://api.openweathermap.org/data/2.5/weather?id=2972315&appid='
+                . $this->apiKey . '&lang=fr&units=metric'
+            );
 
-        $dataJson = $response->getContent();
+            $dataJson = $response->getContent();
 
-        $dataPhpArray  = json_decode($dataJson, true);
+            $dataPhpArray  = json_decode($dataJson, true);
+        }
+        catch (Exception $e) {
+            throw new Exception();
+        }
 
         return [
             //Weather

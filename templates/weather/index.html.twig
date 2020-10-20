@@ -65,7 +65,6 @@
                 </div>
             </div>
 
-
             <div class="forecasts-container">
                 <div class="humidity card">
                     <img src="{{ asset('img/humidity.png') }}" alt="Poucentage d'humidité"/>
@@ -109,7 +108,13 @@
                 </div>
             </div>
         </div>
+
+        <h2>Rechercher votre Météo</h2>
+
+        <div class="form-container">
+            {{ form_start(form) }}
+            {{ form_row(form.city) }}
+            {{ form_end(form) }}
+        </div>
     </div>
-
-
 {% endblock %}

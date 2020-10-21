@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 
 class WeatherController extends AbstractController
 {
-    private $weatherService;
+    private WeatherService $weatherService;
 
     public function __construct(WeatherService $weather)
     {
@@ -30,7 +30,7 @@ class WeatherController extends AbstractController
     {
         $defaultData = ['message' => 'Rechercher une ville'];
         $form = $this->createFormBuilder($defaultData)
-            ->add('city', TextType::class,  [
+            ->add('city', TextType::class, [
                 'attr' => [
                     'placeholder' => 'Indiquer votre ville'
                 ],

@@ -1043,6 +1043,7 @@ body {
 .container-title .home-link {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .container-title .home-link a {
@@ -1363,5 +1364,22 @@ body {
 
   .face {
     transform: scale(0.7);
+  }
+}
+
+@media screen and (max-height: 420px) {
+  .container-title .title {
+    margin-top: 75px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .container-star {
+    min-height: 500px;
+  }
+
+  .container-bird,
+  .container-title {
+    height: 100%;
   }
 }

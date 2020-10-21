@@ -92,7 +92,7 @@
                         <line x1="3" y1="21" x2="21" y2="21" />
                         <path d="M12 9v-6l3 3m-6 0l3 -3" />
                     </svg>
-                    <p>Lever du soleil à {{ data.sunrise | date('H:s', "Europe/Paris")}}</p>
+                    <p>Lever du soleil à {{ data.sunrise }}</p>
                 </div>
 
                 <div class="sunset card">
@@ -104,7 +104,7 @@
                         <line x1="3" y1="21" x2="21" y2="21" />
                         <path d="M12 3v6l3 -3m-6 0l3 3" />
                     </svg>
-                    <p>Coucher du soleil à {{ data.sunset | date('H:s', "Europe/Paris")}}</p>
+                    <p>Coucher du soleil à {{ data.sunset }}
                 </div>
             </div>
         </div>

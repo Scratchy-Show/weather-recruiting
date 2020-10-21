@@ -9,11 +9,13 @@ class WeatherService
 {
     private $client;
     private $apiKey;
+    private $dataPhpArray;
 
     public function __construct($apiKey)
     {
         $this->client = HttpClient::create();
         $this->apiKey = $apiKey;
+        $this->dataPhpArray = [];
     }
 
     /**
@@ -32,7 +34,7 @@ class WeatherService
 
             $dataJson = $response->getContent();
 
-            $dataPhpArray  = json_decode($dataJson, true);
+            $this->dataPhpArray  = json_decode($dataJson, true);
         }
         catch (Exception $e) {
             throw new Exception();
@@ -40,19 +42,20 @@ class WeatherService
 
         return [
             //Weather
-            'description' => $dataPhpArray['weather'][0]['description'],
-            'icon'        => $dataPhpArray['weather'][0]['icon'],
-            'temp'        => $this->roundTemperatureValue($dataPhpArray['main']['temp']),
-            'feels_like'  => $this->roundTemperatureValue($dataPhpArray['main']['feels_like']),
-            'temp_min'    => $this->roundTemperatureValue($dataPhpArray['main']['temp_min']),
-            'temp_max'    => $this->roundTemperatureValue($dataPhpArray['main']['temp_max']),
-            'humidity'    => $dataPhpArray['main']['humidity'],
-            'speed'       => $this->convertWindSpeedAndRoundedValue($dataPhpArray['wind']['speed']),
+            'description' => $this->dataPhpArray['weather'][0]['description'],
+            'icon'        => $this->dataPhpArray['weather'][0]['icon'],
+            'temp'        => $this->roundTemperatureValue($this->dataPhpArray['main']['temp']),
+            'feels_like'  => $this->roundTemperatureValue($this->dataPhpArray['main']['feels_like']),
+            'temp_min'    => $this->roundTemperatureValue($this->dataPhpArray['main']['temp_min']),
+            'temp_max'    => $this->roundTemperatureValue($this->dataPhpArray['main']['temp_max']),
+            'humidity'    => $this->dataPhpArray['main']['humidity'],
+            'speed'       => $this->convertWindSpeedAndRoundedValue($this->dataPhpArray['wind']['speed']),
             // Sun
-            'sunrise'     => $dataPhpArray['sys']['sunrise'],
-            'sunset'      => $dataPhpArray['sys']['sunset'],
+            'sunrise'     => $this->convertTimeTimezone($this->dataPhpArray['sys']['sunrise']),
+            'sunset'      => $this->convertTimeTimezone($this->dataPhpArray['sys']['sunset']),
             // Town
-            'name'        => $dataPhpArray['name'],
+            'name'        => $this->dataPhpArray['name'],
+            'timezone'    => $this->dataPhpArray['timezone']
         ];
     }
 
@@ -65,5 +68,14 @@ class WeatherService
     // Round the temperature value
     public function roundTemperatureValue($preciseTemperature) {
         return round($preciseTemperature);
+    }
+
+    // Convert time to timezone
+    public function convertTimeTimezone($timeStamp) {
+        date_default_timezone_set('UTC');
+
+        $timezone = $this->dataPhpArray['timezone'];
+
+        return date('H:i', $timeStamp + $timezone);
     }
 }

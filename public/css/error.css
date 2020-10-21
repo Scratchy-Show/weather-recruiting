@@ -1,6 +1,6 @@
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -19,21 +19,23 @@ body {
 }
 
 .container-star {
-  background-image: linear-gradient(
-          to bottom,
-          #292256 0%,
-          #8446cf 70%,
-          #a871d6 100%
-  );
+  background-image:
+          linear-gradient(
+                  to bottom,
+                  #292256 0%,
+                  #8446cf 70%,
+                  #a871d6 100%
+          );
 }
 
-.container-star:after {
-  background: radial-gradient(
-          ellipse at center,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0) 40%,
-          rgba(15, 10, 38, 0.2) 100%
-  );
+.container-star::after {
+  background:
+          radial-gradient(
+                  ellipse at center,
+                  rgba(255, 255, 255, 0) 0%,
+                  rgba(255, 255, 255, 0) 40%,
+                  rgba(15, 10, 38, 0.2) 100%
+          );
   content: "";
   width: 100%;
   height: 100%;
@@ -44,11 +46,11 @@ body {
 .star-1 {
   position: absolute;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #fff;
   animation: twinkle 5s infinite ease-in-out;
 }
 
-.star-1:after {
+.star-1::after {
   height: 100%;
   width: 100%;
   transform: rotate(90deg);
@@ -58,13 +60,14 @@ body {
   border-radius: 50%;
 }
 
-.star-1:before {
-  background: radial-gradient(
-          ellipse at center,
-          rgba(255, 255, 255, 0.5) 0%,
-          rgba(255, 255, 255, 0) 60%,
-          rgba(255, 255, 255, 0) 100%
-  );
+.star-1::before {
+  background:
+          radial-gradient(
+                  ellipse at center,
+                  rgba(255, 255, 255, 0.5) 0%,
+                  rgba(255, 255, 255, 0) 60%,
+                  rgba(255, 255, 255, 0) 100%
+          );
   position: absolute;
   border-radius: 50%;
   content: "";
@@ -80,7 +83,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(1):before {
+.star-1:nth-of-type(1)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -94,7 +97,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-1:nth-of-type(2):before {
+.star-1:nth-of-type(2)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -108,7 +111,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-1:nth-of-type(3):before {
+.star-1:nth-of-type(3)::before {
   width: 18px;
   height: 18px;
   top: -250%;
@@ -122,7 +125,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-1:nth-of-type(4):before {
+.star-1:nth-of-type(4)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -136,7 +139,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-1:nth-of-type(5):before {
+.star-1:nth-of-type(5)::before {
   width: 16px;
   height: 16px;
   top: -250%;
@@ -150,7 +153,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(6):before {
+.star-1:nth-of-type(6)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -164,7 +167,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(7):before {
+.star-1:nth-of-type(7)::before {
   width: 14px;
   height: 14px;
   top: -250%;
@@ -178,7 +181,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-1:nth-of-type(8):before {
+.star-1:nth-of-type(8)::before {
   width: 16px;
   height: 16px;
   top: -250%;
@@ -192,7 +195,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(9):before {
+.star-1:nth-of-type(9)::before {
   width: 18px;
   height: 18px;
   top: -250%;
@@ -206,7 +209,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(10):before {
+.star-1:nth-of-type(10)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -220,7 +223,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(11):before {
+.star-1:nth-of-type(11)::before {
   width: 16px;
   height: 16px;
   top: -250%;
@@ -234,7 +237,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(12):before {
+.star-1:nth-of-type(12)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -248,7 +251,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(13):before {
+.star-1:nth-of-type(13)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -262,7 +265,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-1:nth-of-type(14):before {
+.star-1:nth-of-type(14)::before {
   width: 16px;
   height: 16px;
   top: -250%;
@@ -276,7 +279,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(15):before {
+.star-1:nth-of-type(15)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -290,7 +293,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(16):before {
+.star-1:nth-of-type(16)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -304,7 +307,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-1:nth-of-type(17):before {
+.star-1:nth-of-type(17)::before {
   width: 18px;
   height: 18px;
   top: -250%;
@@ -318,7 +321,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(18):before {
+.star-1:nth-of-type(18)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -332,7 +335,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(19):before {
+.star-1:nth-of-type(19)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -346,7 +349,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-1:nth-of-type(20):before {
+.star-1:nth-of-type(20)::before {
   width: 14px;
   height: 14px;
   top: -250%;
@@ -360,7 +363,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-1:nth-of-type(21):before {
+.star-1:nth-of-type(21)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -373,7 +376,7 @@ body {
   height: 2px;
   animation-delay: 4s;
 }
-.star-1:nth-of-type(22):before {
+.star-1:nth-of-type(22)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -387,7 +390,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-1:nth-of-type(23):before {
+.star-1:nth-of-type(23)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -401,7 +404,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(24):before {
+.star-1:nth-of-type(24)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -415,7 +418,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-1:nth-of-type(25):before {
+.star-1:nth-of-type(25)::before {
   width: 10px;
   height: 10px;
   top: -250%;
@@ -429,7 +432,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-1:nth-of-type(26):before {
+.star-1:nth-of-type(26)::before {
   width: 14px;
   height: 14px;
   top: -250%;
@@ -443,7 +446,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-1:nth-of-type(27):before {
+.star-1:nth-of-type(27)::before {
   width: 12px;
   height: 12px;
   top: -250%;
@@ -457,7 +460,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-1:nth-of-type(28):before {
+.star-1:nth-of-type(28)::before {
   width: 14px;
   height: 14px;
   top: -250%;
@@ -471,7 +474,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-1:nth-of-type(29):before {
+.star-1:nth-of-type(29)::before {
   width: 16px;
   height: 16px;
   top: -250%;
@@ -485,7 +488,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-1:nth-of-type(30):before {
+.star-1:nth-of-type(30)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -494,7 +497,7 @@ body {
 .star-2 {
   position: absolute;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #fff;
   animation: twinkle 5s infinite ease-in-out;
 }
 
@@ -506,7 +509,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(31):before {
+.star-2:nth-of-type(31)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -520,7 +523,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-2:nth-of-type(32):before {
+.star-2:nth-of-type(32)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -534,7 +537,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(33):before {
+.star-2:nth-of-type(33)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -547,7 +550,7 @@ body {
   height: 2px;
   animation-delay: 5s;
 }
-.star-2:nth-of-type(34):before {
+.star-2:nth-of-type(34)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -561,7 +564,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(35):before {
+.star-2:nth-of-type(35)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -575,7 +578,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-2:nth-of-type(36):before {
+.star-2:nth-of-type(36)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -589,7 +592,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-2:nth-of-type(37):before {
+.star-2:nth-of-type(37)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -603,7 +606,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(38):before {
+.star-2:nth-of-type(38)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -617,7 +620,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(39):before {
+.star-2:nth-of-type(39)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -631,7 +634,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(40):before {
+.star-2:nth-of-type(40)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -645,7 +648,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(41):before {
+.star-2:nth-of-type(41)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -659,7 +662,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(42):before {
+.star-2:nth-of-type(42)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -673,7 +676,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(43):before {
+.star-2:nth-of-type(43)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -687,7 +690,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-2:nth-of-type(44):before {
+.star-2:nth-of-type(44)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -701,7 +704,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(45):before {
+.star-2:nth-of-type(45)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -715,7 +718,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(46):before {
+.star-2:nth-of-type(46)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -729,7 +732,7 @@ body {
   animation-delay: 1s;
 }
 
-.star-2:nth-of-type(47):before {
+.star-2:nth-of-type(47)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -743,7 +746,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(48):before {
+.star-2:nth-of-type(48)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -757,7 +760,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(49):before {
+.star-2:nth-of-type(49)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -771,7 +774,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(50):before {
+.star-2:nth-of-type(50)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -785,7 +788,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-2:nth-of-type(51):before {
+.star-2:nth-of-type(51)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -799,7 +802,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(52):before {
+.star-2:nth-of-type(52)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -813,7 +816,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-2:nth-of-type(53):before {
+.star-2:nth-of-type(53)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -827,7 +830,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-2:nth-of-type(54):before {
+.star-2:nth-of-type(54)::before {
   width: 8px;
   height: 8px;
   top: -250%;
@@ -841,7 +844,7 @@ body {
   animation-delay: 4s;
 }
 
-.star-2:nth-of-type(55):before {
+.star-2:nth-of-type(55)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -855,7 +858,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(56):before {
+.star-2:nth-of-type(56)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -869,7 +872,7 @@ body {
   animation-delay: 2s;
 }
 
-.star-2:nth-of-type(57):before {
+.star-2:nth-of-type(57)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -883,7 +886,7 @@ body {
   animation-delay: 3s;
 }
 
-.star-2:nth-of-type(58):before {
+.star-2:nth-of-type(58)::before {
   width: 4px;
   height: 4px;
   top: -250%;
@@ -897,7 +900,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(59):before {
+.star-2:nth-of-type(59)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -911,7 +914,7 @@ body {
   animation-delay: 5s;
 }
 
-.star-2:nth-of-type(60):before {
+.star-2:nth-of-type(60)::before {
   width: 6px;
   height: 6px;
   top: -250%;
@@ -999,10 +1002,10 @@ body {
   position: absolute;
 }
 
-.moon .face .eyes .eye-left:before,
-.moon .face .eyes .eye-left:after,
-.moon .face .eyes .eye-right:before,
-.moon .face .eyes .eye-right:after {
+.moon .face .eyes .eye-left::before,
+.moon .face .eyes .eye-left::after,
+.moon .face .eyes .eye-right::before,
+.moon .face .eyes .eye-right::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -1013,8 +1016,8 @@ body {
   left: -4px;
 }
 
-.moon .face .eyes .eye-left:after,
-.moon .face .eyes .eye-right:after {
+.moon .face .eyes .eye-left::after,
+.moon .face .eyes .eye-right::after {
   left: auto;
   right: -4px;
 }

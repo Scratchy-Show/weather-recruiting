@@ -17,7 +17,8 @@ body {
   color: white;
 }
 
-h1, h2 {
+h1,
+h2 {
   padding: 25px;
   margin-top: 0;
   text-align: center;
@@ -33,7 +34,6 @@ h2 {
 p {
   text-align: center;
 }
-
 
 ul {
   padding: 0;
@@ -59,7 +59,8 @@ li {
   border-radius: 15px;
 }
 
-.infos-container, .form-container {
+.infos-container,
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,24 +70,25 @@ li {
 }
 
 .card {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: 20%;
-   margin: 5px;
-   padding: 5px;
-   border: 2px solid white;
-   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 15px;
  }
 
-.temp-container, .forecasts-container {
-   display: flex;
-   flex-direction: row;
-   align-self: center;
-   justify-content: center;
-   width: 100%;
-   flex-wrap: wrap;
+.temp-container,
+.forecasts-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
  }
 
 .temp-container {
@@ -112,7 +114,6 @@ form input {
 
 form button {
   margin: 1.5em 0;
-
   padding: 0.5em 1em;
   letter-spacing: 1px;
   border: 2px solid white;
@@ -145,7 +146,7 @@ form button:hover::after {
   transition: width 0.5s ease-in-out;
 }
 
-form button:not(.ctrl){
+form button:not(.ctrl) {
   position: relative;
   z-index: 10;
   transition-delay: 0.2s;
@@ -153,8 +154,7 @@ form button:not(.ctrl){
 }
 
 form button:not(.ctrl)::after,
-form button:not(.ctrl)::before
-{
+form button:not(.ctrl)::before {
   position: absolute;
   display: block;
   content: "";

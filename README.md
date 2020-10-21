@@ -1,7 +1,7 @@
 # Weather
 
 Exercice à la suite d'une candidature spontanée.
-Énoncé de l'exercice dans le fichier instructions_exo-sf.md.
+Énoncé de l'exercice dans le fichier instructions_exo-sf.md
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 

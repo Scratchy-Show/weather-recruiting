@@ -3,8 +3,8 @@ Please read this!
 Before opening a new issue, make sure to search for keywords in the issues
 filtered by the "regression" or "bug" label:
 
-- https://gitlab.com/alexandre.couret/{project_name}/-/issues?label_name%5B%5D=regression
-- https://gitlab.com/alexandre.couret/{project_name}/-/issues?label_name%5B%5D=bug
+- https://gitlab.com/alexandre.couret/weather-recruiting/-/issues?label_name%5B%5D=regression
+- https://gitlab.com/alexandre.couret/weather-recruiting/-/issues?label_name%5B%5D=bug
 
 and verify the issue you're about to submit isn't a duplicate.
 

@@ -25,8 +25,4 @@ It may be a good idea to create separate issues and link them here.
 If you are aware of tests that need to be written or adjusted apart from unit tests for the changed components,
 please list them here.
 
-Please select the appropriate label from the following:
-    ~"feature::addition"
-    ~"feature::maintenance"
-
-/label ~feature::maintenance
+/label ~refactoring

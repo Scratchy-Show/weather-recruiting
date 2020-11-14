@@ -28,7 +28,5 @@ please list them here.
 Please select the appropriate label from the following:
     ~"feature::addition"
     ~"feature::maintenance"
-    ~"tooling::pipelines"
-    ~"tooling::workflow"
 
-/label ~"feature::maintenance"
+/label ~feature::maintenance
